@@ -1,4 +1,4 @@
-import makeAnimations from '../helpers/animations';
+// import makeAnimations from '../helpers/animations';
 
 class BootScene extends Phaser.Scene {
     constructor(test) {
@@ -19,7 +19,7 @@ class BootScene extends Phaser.Scene {
         // Register a load complete event to launch the title screen when all files are loaded
         this.load.on('complete', () => {
             // prepare all animations, defined in a separate file
-            makeAnimations(this);
+            // makeAnimations(this);
             progress.destroy();
             // this.scene.start('TitleScene');
             this.scene.start('GameScene');
@@ -39,7 +39,7 @@ class BootScene extends Phaser.Scene {
         // this.load.tilemapTiledJSON('map', 'assets/tilemaps/tilemap.json');
         //spritesheetは画像のサイズを合わせないとframe errorになる...
         this.load.spritesheet('next_tap', 'assets/images/next_tap.png', { frameWidth: 32, frameHeight: 32 });
-    
+        this.load.image('title_start', 'assets/images/title_start.png');    
     }
 }
 

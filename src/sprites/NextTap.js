@@ -4,7 +4,7 @@ export default class NextTap extends Phaser.GameObjects.Sprite {
     config.scene.physics.world.enable(this);
     config.scene.add.existing(this);
 
-    // console.log(config.scene);
+    console.log(config.scene);
     this.alive = true;
     this.type = config.type;
     // this.on('pointerdown', function (pointer) {
